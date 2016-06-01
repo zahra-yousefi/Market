@@ -22,13 +22,21 @@ public class BooksListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_books_list);
 
         bookList = (ListView)findViewById(R.id.bookList);
-
         Button btnAdd = (Button)findViewById(R.id.btnAdd);
+        Button btnEdit = (Button)findViewById(R.id.btnEdit);
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BooksListActivity.this, AddBookActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

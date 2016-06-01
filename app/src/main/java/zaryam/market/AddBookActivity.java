@@ -19,7 +19,7 @@ public class AddBookActivity extends AppCompatActivity {
         final EditText txtType = (EditText) findViewById(R.id.txtBookType);
         Button btnSave = (Button) findViewById(R.id.btnSave);
 
-        int id = getIntent().getIntExtra("ID", 0);
+       // int id = getIntent().getIntExtra("ID", 0);
         // get id
 
         /// repo. get by id >> book

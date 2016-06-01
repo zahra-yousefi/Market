@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="zahra"
+            android:text="@string/enterName"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             android:textSize="18dip" />
@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="200"
+            android:text="@string/enterType"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             android:textSize="16dip" />
@@ -40,8 +40,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="Massage"
+            android:text="@string/btnDelete"
             android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnEdit"
+        android:layout_gravity="center_horizontal"/>
 
 
     </LinearLayout>

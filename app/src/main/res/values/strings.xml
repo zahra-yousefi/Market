@@ -4,4 +4,9 @@
     <string name="enterName">Name</string>
     <string name="enterType">Type</string>
     <string name="btnSave">Save</string>
+    <string name="btnEdit">Edit</string>
+    <string name="btnDelete">Delete</string>
+
+
+
 </resources>
