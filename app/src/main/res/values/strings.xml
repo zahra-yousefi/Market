@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Market</string>
+    <string name="btnAdd">Add</string>
+    <string name="enterName">Name</string>
+    <string name="enterType">Type</string>
+    <string name="btnSave">Save</string>
+</resources>

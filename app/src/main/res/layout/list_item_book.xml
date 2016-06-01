@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/txtBookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="zahra"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textSize="18dip" />
+
+        <TextView
+            android:id="@+id/txtQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="200"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/btnShowMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Massage"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
