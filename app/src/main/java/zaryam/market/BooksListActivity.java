@@ -9,11 +9,12 @@ import android.widget.ListView;
 
 import zaryam.market.repositories.book.BookStaticListRepository;
 import zaryam.market.repositories.book.IBookRepository;
+import zaryam.market.repositories.book.RepositoryBuilder;
 
 public class BooksListActivity extends AppCompatActivity {
 
     IBookRepository bookRepository;
-    BookListAddapter adapter;
+    BookListAdapter adapter;
     ListView bookList;
 
     @Override
@@ -23,7 +24,6 @@ public class BooksListActivity extends AppCompatActivity {
 
         bookList = (ListView)findViewById(R.id.bookList);
         Button btnAdd = (Button)findViewById(R.id.btnAdd);
-        Button btnEdit = (Button)findViewById(R.id.btnEdit);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,19 +33,12 @@ public class BooksListActivity extends AppCompatActivity {
             }
         });
 
-        btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        bookRepository = new BookStaticListRepository();
+        bookRepository = RepositoryBuilder.getBookRepository();
         bookRepository.add(new Book(1, "Book1", "Story"));
         bookRepository.add(new Book(2, "Book2", "Romantic"));
         bookRepository.add(new Book(3, "Book3", "Violance"));
 
-        adapter = new BookListAddapter(this, bookRepository, bookRepository.get());
+        adapter = new BookListAdapter(this, bookRepository, bookRepository.get());
         bookList.setAdapter(adapter);
     }
 
@@ -53,7 +46,7 @@ public class BooksListActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        adapter = new BookListAddapter(this, bookRepository, bookRepository.get());
+        adapter = new BookListAdapter(this, bookRepository, bookRepository.get());
         bookList.setAdapter(adapter);
     }
 }

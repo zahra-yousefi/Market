@@ -1,6 +1,7 @@
 package zaryam.market;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +17,13 @@ import zaryam.market.repositories.book.IBookRepository;
 /**
  * Created by 92525252 on 5/31/2016.
  */
-public class BookListAddapter extends ArrayAdapter {
+public class BookListAdapter extends ArrayAdapter {
 
     private ArrayList<Book> books;
     private Context context;
     private IBookRepository bookRepository;
 
-    public BookListAddapter(Context context, IBookRepository bookRepository, ArrayList<Book> books) {
+    public BookListAdapter(Context context, IBookRepository bookRepository, ArrayList<Book> books) {
         super(context, android.R.layout.simple_list_item_1, books);
 
         this.books = books;
@@ -54,6 +55,18 @@ public class BookListAddapter extends ArrayAdapter {
                     Toast.makeText(context, "Could n't remove",Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button btnEdit = (Button)panel.findViewById(R.id.btnEdit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, AddBookActivity.class);
+                intent.putExtra("ID",book.getId());
+                context.startActivity(intent);
+
+            }
+        });
+
 
         txtBookName.setText(book.getName());
         txtQuantity.setText(book.getType());

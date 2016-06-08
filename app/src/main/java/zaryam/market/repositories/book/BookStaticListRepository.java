@@ -1,6 +1,7 @@
 package zaryam.market.repositories.book;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import zaryam.market.Book;
 
@@ -32,5 +33,30 @@ public class BookStaticListRepository implements IBookRepository {
 
     public ArrayList<Book> get() {
         return books;
+    }
+
+    public Book getId(int id){
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getId() == id) {
+                return books.get(i);
+            }
+        }
+        return null;
+    }
+
+    public boolean update(int id, String bookName, String bookType) {
+
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getId() == id) {
+
+                Book book = books.get(i);
+                book.setName(bookName);
+                book.setType(bookType);
+
+                return true;
+            }
+        }
+
+        return false;
     }
 }

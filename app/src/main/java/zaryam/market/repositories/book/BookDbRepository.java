@@ -28,4 +28,11 @@ public class BookDbRepository implements IBookRepository {
     public ArrayList<Book> get() {
         return new ArrayList<>();
     }
+    public Book getId(int id){
+        return null;
+    }
+
+    public boolean update(int id, String bookName, String bookType) {
+        return  true;
+    }
 }

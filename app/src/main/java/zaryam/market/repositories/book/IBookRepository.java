@@ -16,4 +16,8 @@ public interface IBookRepository {
     boolean remove(int id);
 
     ArrayList<Book> get();
+
+    Book getId(int id);
+
+    boolean update(int id, String bookName, String bookType);
 }
