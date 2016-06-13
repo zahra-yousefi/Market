@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".BooksListActivity" />
         <activity android:name=".AddBookActivity" />
+        <activity android:name=".MenuActivity"></activity>
     </application>
 
 </manifest>
